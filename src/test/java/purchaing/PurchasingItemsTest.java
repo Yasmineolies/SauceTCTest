@@ -1,33 +1,14 @@
 package purchaing;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
+import base.BaseTest;
 import pages.CartPage;
 import pages.HomePage;
 import pages.InventoryPage;
 
-public class PurchasingItemsTest {
-	private WebDriver driver;
-	
-	@BeforeClass
-	public void SetUp() {
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//executable//chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get("https://www.saucedemo.com/");
-		//driver.findElement(By.xpath("//button[@id='details-button']")).click();
-		//driver.findElement(By.xpath("//*[@id='proceed-link']")).click();
-	}
-	
-	
+public class PurchasingItemsTest extends BaseTest {
+		
 	@Test
 	public void LoginVerifyAddedItemToCartIsDisplayed() {
 		HomePage home = new HomePage(driver);

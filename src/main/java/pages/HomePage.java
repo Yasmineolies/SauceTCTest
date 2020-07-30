@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
@@ -35,5 +36,14 @@ public class HomePage {
 	
 	public String getPageUrl() {
 		return driver.getCurrentUrl();
+	}
+	
+	public InventoryPage EnterKey() {
+		driver.findElement(loginButton).sendKeys(Keys.ENTER);
+		return new InventoryPage(driver);
+	}
+	
+	public void BackButton() {
+		driver.navigate().back();
 	}
 }

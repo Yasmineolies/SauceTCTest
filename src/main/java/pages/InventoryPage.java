@@ -14,7 +14,6 @@ public class InventoryPage {
 		private By OnesieButton = By.xpath("//div[@class =\"inventory_list\"]/child::div[5]/child::div[3]/button");
 		private By ShoppingCart = By.xpath("//div[@class =\"shopping_cart_container\"]");
 		private By CartQuantityOnCartElement = By.xpath("//span[@class =\"fa-layers-counter shopping_cart_badge\"]");
-
 				
 		public InventoryPage(WebDriver driver) {
 			this.driver = driver;
@@ -69,6 +68,4 @@ public class InventoryPage {
 				int item = Integer.parseInt(cartItems);
 					return item;
 		}
-		
-		
 }
