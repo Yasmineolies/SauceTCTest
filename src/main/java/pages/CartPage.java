@@ -1,7 +1,5 @@
 package pages;
 
-import java.math.BigDecimal;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
